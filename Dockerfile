@@ -5,7 +5,7 @@ RUN apt-get update -q && \
 	apt-get upgrade -yq && \
 	apt-get install -yq wget curl git build-essential vim sudo lsb-release locales bash-completion tzdata gosu && \
 	rm -rf /var/lib/apt/lists/*
-RUN curl -sL https://deb.nodesource.com/setup_current.x | bash - && \
+RUN curl -sL https://deb.nodesource.com/setup_14.x | bash - && \
 	apt-get install -y nodejs python3-pip && \
 	rm -rf /var/lib/apt/lists/*
 RUN pip3 install jupyter jupyterlab && \
